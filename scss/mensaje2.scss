@@ -1,0 +1,187 @@
+// Definición de variables de colores
+$primary-color: #6a0dad; // Morado principal
+$secondary-color: #d3a1f4; // Morado claro
+$background-color: #000; // Fondo negro de la página
+$body-bg: #f4f4f4; // Fondo general de la página
+
+// Estilos generales
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: $background-color;
+    overflow-x: hidden;
+}
+
+.main {
+    padding-top: 8%;
+}
+
+.botonVolver {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: $primary-color;
+    /* Morado principal */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Sombra más tenue */
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #531090;
+        /* Morado más oscuro */
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
+        transform: scale(1.05);
+    }
+}
+
+// Fondo de video
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+// Animación para deslizamiento hacia abajo y opacidad
+@keyframes fadeInSlide {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// Estilo para el header
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        animation: fadeInSlide 1s ease-out; // Animación al cargar
+        transition: color 0.3s ease; // Transición suave al color
+
+        &:hover {
+            transform: scale(1.05); // Ampliar ligeramente al pasar el ratón
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: #f4f4f4;
+        animation: fadeInSlide 1.2s ease-out; // Animación al cargar con retraso
+        transition: transform 0.3s ease; // Transición suave al transformar
+
+    }
+}
+
+
+// Estilo para el formulario como tarjeta
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: auto;
+
+    .form-label {
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        font-size: 18px;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    input,
+    textarea {
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 10px rgba($primary-color, 0.5);
+        }
+    }
+}
+
+.creativeCommons {
+    padding: 20px 60px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: hsla(0, 0%, 85%, 0.5); // Ajuste con transparencia
+    margin-left: 0;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 4%;
+
+    p {
+        text-align: center;
+        margin: 0; // Elimina los márgenes predeterminados
+        font-size: 14px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+
+    a {
+        color: rgb(90, 0, 150);
+    }
+
+    img {
+        height: 22px !important;
+        margin-left: 3px;
+    }
+}
+
+// Estilos para la responsividad
+@media (min-width: 576px) {
+    .main {
+        padding-top: 5%;
+    }
+
+    .contact-form {
+        padding: 20px;
+
+        button {
+            font-size: 16px;
+        }
+    }
+}
+
+// Para pantallas grandes
+@media (min-width: 992px) {
+    .contact-form {
+        margin-top: 40px;
+        max-width: 600px;
+    }
+}

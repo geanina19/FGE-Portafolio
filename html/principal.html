@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/g1.ico">
+    <link rel="stylesheet" href="../css/principal2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>FGE-Portafolios</title>
+</head>
+
+<body>
+    <!-- "Puntero" simulado
+    <div id="mouse"></div> -->
+
+    <!-- Video de fondo -->
+    <video autoplay loop muted id="background-video">
+        <source src="../mp4/videoFondoMorado.mp4" type="video/mp4">
+        Tu navegador no soporta este formato de video.
+        <track src="../mp4/subtitulos.vtt.txt" kind="subtitles" srclang="en" label="English">
+    </video>
+
+
+    <main>
+
+        <script src="../js/tiempoEsperaBlog.js"></script>
+        <script src="../js/tiempoEsperaPromocion.js"></script>
+        <script src="../js/tiempoEsperaBootstrap.js"></script>
+
+
+        <!-- Banner de bienvenida sobre accesibilidad -->
+        <div id="accesibilidadBanner" class="accesibilidad-banner">
+            <div class="banner-content">
+                <p>
+                    <span>¡Bienvenido!</span> Hemos implementado un apartado de <span>accesibilidad</span> en
+                    nuestra página web. Haz clic en el ícono de accesibilidad a la izquierda para ver los atajos de
+                    teclado
+                    disponibles. <br>
+                    <span>Ctrl + Shift + H -> Abre el menú de accesibilidad.</span>
+                </p>
+                <button id="closeBanner" class="close-btn">&times;</button>
+            </div>
+        </div>
+
+
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasImagen" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasLabel">Imagen Ampliada</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <img src="../images/geanina.png" alt="Imagen ampliada de Geanina" width="100%" />
+            </div>
+        </div>
+
+        <!-- Accesibilidad - Offcanvas como pestaña centrada -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAccesibilidad"
+            aria-labelledby="offcanvasAccesibilidadLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasAccesibilidadLabel">Accesibilidad</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h6>Atajos de teclado:</h6>
+                <br>
+                <ul>
+                    <li><img src="../images/ctrl.png" alt="Tecla Ctrl">+<img src="../images/shift.png"
+                            alt="Tecla Shift">+ S → &nbsp; <span>Sobre mi</span>&nbsp;<i
+                            class="bi bi-person-circle"></i></li>
+                    <li>Ctrl + Shift + S </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/ctrl.png" alt="Tecla Ctrl">+<img src="../images/shift.png"
+                            alt="Tecla Shift">+ C → &nbsp; <span>Contacto</span>&nbsp;<i
+                            class="bi bi-person-lines-fill"></i></li>
+                    <li>Ctrl + Shift + C </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/ctrl.png" alt="Tecla Ctrl">+<img src="../images/shift.png"
+                            alt="Tecla Shift">+ P → &nbsp; <span>Proyectos</span>&nbsp;<i class="bi bi-folder2"></i>
+                    </li>
+                    <li>Ctrl + Shift + P </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/shift.png" alt="Tecla Shift">+ C → &nbsp; <span>Conocimientos</span>&nbsp;<i
+                            class="bi bi-laptop"></i></i>
+                    </li>
+                    <li>Shift + P </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/ctrl.png" alt="Tecla Ctrl">+<img src="../images/shift.png"
+                            alt="Tecla Shift">+ H → &nbsp; <span>Accesibilidad</span>&nbsp;<i
+                            class="bi bi-universal-access-circle"></i></li>
+                    <li>Ctrl + Shift + H </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/ctrl.png" alt="Tecla Ctrl">+<img src="../images/shift.png"
+                            alt="Tecla Shift">+ M → &nbsp; <span>Enviar mensaje</span>&nbsp;<i
+                            class="bi bi-envelope"></i></li>
+                    <li>Ctrl + Shift + M </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/shift.png"
+                            alt="Tecla Shift">+ V → &nbsp; <span>Descargar CV</span>&nbsp;<i class="bi bi-download"></i></li>
+                    <li>Shift + V</li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/flechaArriba.png" alt="Tecla Flecha arriba"> → &nbsp; <span>Hacia
+                            arriba</span></li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/flechaAbajo.png" alt="Tecla Flecha abajo"> → &nbsp; <span>Hacia abajo</span>
+                    </li>
+                    <hr style="border: 1px solid black;">
+                    <li><img src="../images/tabulador.png" alt="Tecla tabulador"> → &nbsp; <span>Posicionarte sobre
+                            botones</span></li>
+                    <li>Tabulador (dos flechas una a cada sentido)</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Botón para activar el offcanvas (Pestaña central) -->
+        <button class="btn btn-primary accessibility-tab" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasAccesibilidad" aria-controls="offcanvasAccesibilidad">
+            <i class="bi bi-universal-access-circle"></i>
+        </button>
+
+
+
+        <aside class="sidebar" data-sidebar id="infoContacto">
+            <div class="sidebar-info d-flex align-items-center gap-3 position-relative">
+                <!-- Avatar Section -->
+                <div class="avatar-modal">
+                    <figure class="avatar-box bg-gradient-onyx rounded-3">
+                        <img src="../images/geanina.png" alt="Imagen de Geanina Evelina Fonata" />
+                    </figure>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasImagen" aria-controls="offcanvasImagen">
+                        Ampliar imagen
+                    </button>
+                </div>
+
+
+                <!-- Información del Usuario -->
+                <div class="info-content">
+                    <h1 class="name text-white fs-3 fw-500 mb-2" title="Geanina Evelina Foanta">Geanina Evelina Foanta
+                    </h1>
+                    <p class="title fs-8 fw-300 rounded-2 px-3 py-1">Informática</p>
+                </div>
+
+                <button type="button" class="info_more-btn btn btn-primary" data-bs-toggle="collapse"
+                    data-bs-target="#sidebarInfoMore">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+            </div>
+
+
+            <!-- Contenedor colapsable -->
+            <div class="collapse" id="sidebarInfoMore">
+                <div class="separator my-3"></div>
+
+                <!-- Contacts List -->
+                <ul class="contacts-list list-unstyled">
+                    <li class="contact-item d-flex align-items-center gap-3">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title mb-2">Email</p>
+                            <div>
+                                <a href="mailto:geanina8148@gmail.com"
+                                    class="contact-link text-white-2 fs-7">geanina8148@gmail.com</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="contact-item d-flex align-items-center gap-3">
+                        <div class="icon-box">
+                            <i class="bi bi-phone-vibrate-fill"></i>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title mb-2">Teléfono</p>
+                            <p class="contact-link">+34 695637506</p>
+                        </div>
+                    </li>
+
+                    <li class="contact-item d-flex align-items-center gap-3">
+                        <div class="icon-box">
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title mb-2">Linkedin</p>
+                            <a
+                                href="https://www.linkedin.com/in/geanina-evelina-foanta-9796762bb/">geanina-evelina-foanta</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="separator my-3"></div>
+
+                <!-- Social Links -->
+                <ul class="social-list d-flex gap-3 px-3 pb-4">
+                    <li class="social-item">
+                        <a href="https://github.com/geanina19" class="social-link fs-5">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <button class="btn btn-primary" onclick="window.open('../documentos/FGE_CV.pdf', '_blank')">
+                            Descargar CV
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <!-- #contenido principal -->
+        <div class="main-content">
+
+            <!-- #NAVBAR -->
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-lg">
+                <div class="container">
+                    <!-- Botón del menú en dispositivos pequeños -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navBar mx-auto">
+                        <a class="navbar-brand" href="#">Menú</a>
+                    </div>
+
+
+                    <!-- Contenedor de los enlaces de la barra de navegación -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto d-flex justify-content-center align-items-center flex-wrap">
+                            <li class="nav-item">
+                                <button class="nav-link active" data-nav-link><a href="#infoContacto">Info
+                                        contacto</a>&nbsp;<i class="bi bi-person-lines-fill"></i></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-nav-link><a href="#sobreMi">Sobre mi</a>&nbsp;<i
+                                        class="bi bi-person-circle"></i></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-nav-link><a href="#proyectos">Proyectos</a>&nbsp;<i
+                                        class="bi bi-folder2"></i></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-nav-link><a
+                                        href="#conocimientos">Conocimientos</a>&nbsp;<i
+                                        class="bi bi-laptop"></i></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link btn btn-link" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasAccesibilidad" aria-controls="offcanvasAccesibilidad">
+                                    Accesibilidad&nbsp;<i class="bi bi-universal-access-circle"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="mensaje.html" data-nav-link>Enviar Mensaje&nbsp;<i
+                                        class="bi bi-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <a href="" id="sobreMi"></a>
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="article-title h2">Sobre mi</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>
+                        Soy desarrolladora de software con formación en Desarrollo de
+                        Aplicaciones Multiplataforma (DAM) y Desarrollo de Aplicaciones
+                        Web (DAW). Mi enfoque está en crear soluciones digitales funcionales
+                        y atractivas, garantizando una excelente experiencia de usuario.
+                    </p>
+
+                    <p>
+                        Me apasiona transformar problemas complejos en diseños intuitivos y
+                        accesibles. Trabajo en el diseño y desarrollo de sitios web y
+                        aplicaciones que sean no solo visualmente agradables, sino también
+                        eficientes y fáciles de usar.
+                    </p>
+                    <a href="" id="proyectos"></a>
+                </section>
+                <br>
+
+                <!-- Proyectos -->
+                <section class="service mb-5">
+                    <h3 class="h3 service-title mb-4">Proyectos</h3>
+                    <br>
+                    <div class="row g-4">
+                        <!-- Primer Service Item -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="service-item bg-item-1" onclick="showLoaderBootstrap(event)">
+                                <div class="service-icon-box text-center mb-3">
+                                    <img src="../images/logobs5.ico" alt="Icono de bootstrap5 " width="40">
+                                </div>
+                                <div class="service-content-box text-center">
+                                    <h4 class="h4 service-item-title mb-3">Bootstrap</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segundo Service Item -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="service-item bg-item-2" onclick="showLoaderPromocion(event)">
+                                <div class="service-icon-box text-center mb-3">
+                                    <img src="../images/programador.ico" alt="Icono de un ordenador" width="40">
+                                </div>
+                                <div class="service-content-box text-center">
+                                    <h4 class="h4 service-item-title mb-3">Promocionando DAW</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tercer Service Item -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="service-item bg-item-3" onclick="showLoader(event)">
+                                <div class="service-icon-box text-center mb-3">
+                                    <img src="../images/blog.ico" alt="Icono de una B para representar la palabra Blog"
+                                        width="40">
+                                </div>
+                                <div class="service-content-box text-center">
+                                    <h4 class="h4 service-item-title mb-3">Blog - Computación Cuántica</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Overlay con el spinner -->
+                <div id="loaderOverlay" class="loader-overlay">
+                    <div class="spinner-container">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        <div class="spinner-border text-warning" role="status"></div>
+                        <div class="spinner-border text-danger" role="status"></div>
+                    </div>
+                </div>
+
+                <!-- conocimientos -->
+
+                <section id="conocimientos">
+                    <h3 class="h3 conocimientos-title">Conocimientos</h3>
+
+                    <!-- Carousel -->
+                    <div id="carouselConocimientos" class="carousel slide has-scrollbar" data-bs-ride="carousel">
+                        <!-- Indicators/Dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="6"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="7"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="8"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos" data-bs-slide-to="9"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos"
+                                data-bs-slide-to="10"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos"
+                                data-bs-slide-to="11"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos"
+                                data-bs-slide-to="12"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos"
+                                data-bs-slide-to="13"></button>
+                            <button type="button" data-bs-target="#carouselConocimientos"
+                                data-bs-slide-to="14"></button>
+                        </div>
+
+                        <!-- Carousel Content -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure>
+                                    <img src="../images/androidStudio.png" alt="Icono AndroidStudio" class="d-block">
+                                    <figcaption>Android Studio</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/angular.jpg" alt="Icono Angular" class="d-block">
+                                    <figcaption>Angular</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/eclipse.png" alt="Icono Eclipse" class="d-block">
+                                    <figcaption>Eclipse</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/git.png" alt="Icono Git" class="d-block">
+                                    <figcaption>Git</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/html.png" alt="Icono Html" class="d-block">
+                                    <figcaption>HTML</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/intelliJ.jpg" alt="Icono IntelliJ" class="d-block">
+                                    <figcaption>IntelliJ</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/java.png" alt="Icono Java" class="d-block">
+                                    <figcaption>Java</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/js.png" alt="Icono Java Script" class="d-block">
+                                    <figcaption>JavaScript</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/kotlin.jpg" alt="Icono Kotlin" class="d-block">
+                                    <figcaption>Kotlin</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/netBeans.png" alt="Icono NetBeans" class="d-block">
+                                    <figcaption>NetBeans</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/notepad.jpg" alt="Icono Notepad++" class="d-block">
+                                    <figcaption>Notepad++</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/php.png" alt="Icono PHP" class="d-block">
+                                    <figcaption>PHP</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/spring.png" alt="Icono Spring" class="d-block">
+                                    <figcaption>Spring</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/sql.png" alt="Icono Sql" class="d-block">
+                                    <figcaption>SQL</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/tailwin.jpg" alt="Icono Tailwin" class="d-block">
+                                    <figcaption>Tailwind</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/visual.png" alt="Icono Visual Studio Code" class="d-block">
+                                    <figcaption>Visual Studio Code</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="../images/logobs5.ico" alt="Icono Bootstrap 5" class="d-block">
+                                    <figcaption>Bootstrap 5</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+
+                        <!-- Navigation Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConocimientos"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselConocimientos"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </section>
+
+
+            </article>
+
+
+        </div>
+
+    </main>
+    <div class="creativeCommons">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span
+                property="dct:title">FGE-Portafolios</span> by <span property="cc:attributionName">Geanina Evelina
+                Foanta</span> is licensed under <a
+                href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+
+    <script src="../js/desplegarSidebar.js" defer></script>
+    <script src="../js/ampliarImagenAutor.js"></script>
+
+    <script src="../js/accesibilidadAtajos.js"></script>
+    <script src="../js/banner.js"></script>
+    <script src="../js/punteroAccesibilidad.js"></script>
+
+</body>
+
+</html>

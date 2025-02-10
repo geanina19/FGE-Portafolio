@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos previos */
+        .code-hidden {
+            display: none;
+            margin-top: 5px;
+        }
+        .code-hidden.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-blue-300 text-gray-800">
+    <header class="bg-blue-600 text-white p-4">
+        <h1 class="text-3xl font-bold text-center">Reflexión: Implementando Accesibilidad y Usabilidad</h1>
+    </header>
+
+    <main class="p-6 space-y-8">
+        <!-- Apartado de Tecnología -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Tecnología</h2>
+            <p class="mb-4">En mi portafolio utilicé <strong>Bootstrap</strong> para el diseño inicial, aprovechando sus componentes predefinidos como carouseles, offcanvas y spinners. En esta reflexión, estoy utilizando <strong>Tailwind CSS</strong>, una herramienta de utilidad que permite un diseño más controlado y flexible.</p>
+            <p>Ambas herramientas son excelentes, pero Tailwind me permite un enfoque más personalizado, mientras que Bootstrap agiliza los desarrollos con sus componentes listos para usar.</p>
+            <p>Adicionalmente, Tailwind ofrece una excelente integración con frameworks modernos como React y Vue, lo que facilita su uso en proyectos de mayor complejidad.</p>
+        </section>
+
+        <!-- Apartado de Accesibilidad y Usabilidad -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Accesibilidad y Usabilidad</h2>
+            <p class="mb-4">En mi portafolio implementé diversas técnicas de accesibilidad para garantizar que todos los usuarios puedan interactuar con el contenido de manera eficiente:</p>
+
+            <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Navegación por teclado mejorada:</strong>
+                    <div class="code-hidden">
+                        <pre class="bg-gray-100 p-4 rounded text-sm">
+button:focus, a:focus, input:focus {
+    outline: 3px solid #ff6347; /* Establece un contorno visible */
+    outline-offset: 2px;
+}
+                        </pre>
+                    </div>
+                </li>
+                <li><strong>Compatibilidad con tecnologías asistivas:</strong> Uso de etiquetas ARIA, por ejemplo:
+                    <div class="code-hidden">
+                        <pre class="bg-gray-100 p-4 rounded text-sm">&lt;button aria-label="Cerrar menú de accesibilidad" id="closeBanner" class="close-btn">×&lt;/button></pre>
+                    </div>
+                </li>
+                <li><strong>Alternativas textuales para imágenes:</strong> Descripciones en el atributo <code>alt</code>.
+                    <div class="code-hidden">
+                        <pre class="bg-gray-100 p-4 rounded text-sm">&lt;img src="path/to/ctrl.png" alt="Icono de Ctrl">&lt;/img></pre>
+                    </div>
+                </li>
+                <li><strong>Texto redimensionable:</strong> Uso de unidades relativas como <code>em</code>, <code>rem</code> o <code>%</code> para los tamaños de fuente.</li>
+                <li><strong>Subtítulos y transcripciones:</strong> Añadí subtítulos a videos usando el atributo <code>track</code>.
+                    <div class="code-hidden">
+                        <pre class="bg-gray-100 p-4 rounded text-sm">
+&lt;video controls>
+    &lt;source src="movie.mp4" type="video/mp4">
+    &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">&lt;/track>
+&lt;/video>
+                        </pre>
+                    </div>
+                </li>
+                <li><strong>Diseño responsivo:</strong> Implementé <code>@media queries</code> para que mi portafolio funcione bien en dispositivos móviles.</li>
+            </ul>
+
+            <p class="mt-4">Además, añadí un apartado de accesibilidad que proporciona atajos a las diferentes secciones del portafolio. Al iniciar, un <strong>offcanvas</strong> muestra indicaciones de dónde consultar los atajos y cómo navegar eficientemente por el sitio.</p>
+        </section>
+
+        <!-- Apartado de CapCut -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">CapCut: Edición de Video</h2>
+            <p>Uno de los retos fue integrar un video editado con <strong>CapCut</strong> en la página de inicio. La edición del video fue un proceso bastante interesante, y aunque no fue sencillo al principio, logré dominarlo. A continuación, te muestro una captura de pantalla como prueba de que he utilizado CapCut para editar el video:</p>
+            <br>
+            <div class="text-center mb-4">
+                <img src="../images/pruebaUtilizacionCapCut.png" alt="Edición con CapCut" class="max-w-full h-auto rounded-lg shadow-md">
+            </div>
+        </section>
+
+        <!-- Apartado de Prototipo -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Prototipo</h2>
+            <p>En cuanto a la estructura de mi portafolio, seguí bastante de cerca el prototipo inicial. No realicé muchos cambios significativos, sino más bien mejoras en el diseño, accesibilidad y usabilidad. El objetivo fue mantener la estructura del prototipo, pero darle un toque más personalizado y funcional.</p>
+            <p>Para ver el prototipo original, puedes descargar el archivo PDF en la siguiente <a href="FGE-PrototipoPortafolio.pdf" target="_blank" class="text-blue-600 hover:underline">descarga aquí</a>.</p>
+        </section>
+
+        <!-- Apartado de Enlaces del Portfolio -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Enlaces Importantes</h2>
+            <p>Para visualizar el portafolio desplegado y acceder al código fuente en GitHub, te dejo los siguientes enlaces:</p>
+            <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Portfolio Desplegado:</strong> <a href="" target="_blank" class="text-blue-600 hover:underline">Visita el portfolio</a></li>
+                <li><strong>Repositorio en GitHub:</strong> <a href="https://github.com/tu-usuario/tu-repositorio" target="_blank" class="text-blue-600 hover:underline">Accede al repositorio</a></li>
+            </ul>
+        </section>
+
+        <!-- Apartado de Conclusión -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Conclusión</h2>
+            <p>Desarrollar este portafolio fue todo un reto. Aprendí a implementar y combinar múltiples herramientas como carouseles, offcanvas, videos y spinners. Incluso integré un video editado con CapCut en la página de inicio, lo cual me llevó tiempo entender, pero finalmente logré dominarlo.</p>
+            <p>Uno de los mayores desafíos fue resolver un error donde el offcanvas se escondía bajo el <code>main</code>, que solucioné moviendo el HTML fuera del contenedor principal.</p>
+            <p>Para futuras mejoras, me gustaría implementar un formulario de contacto completamente funcional, simplificar el diseño con un enfoque minimalista y agregar más apartados al portafolio.</p>
+            <p class="mt-4">Además, planeo explorar otras herramientas como <strong>SASS</strong> para gestionar mejor los estilos y frameworks de JavaScript como <strong>Next.js</strong> para optimizar el rendimiento y la organización del código. Esto permitirá una mayor escalabilidad y un diseño aún más profesional.</p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span
+            property="dct:title">FGE-Portafolios</span> by <span property="cc:attributionName">Geanina Evelina
+            Foanta</span> is licensed under <a
+            href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank"
+            rel="license noopener noreferrer" style="display:inline-flex;align-items:center;gap:5px;">CC BY-NC-ND 4.0<img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+</body>
+</html>

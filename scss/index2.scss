@@ -1,0 +1,130 @@
+/* Estilo general para el body */
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+  /* Fondo de imagen */
+  background-image: url('../images/fondoParaVideoIndex.png') !important; /* Ruta al archivo de imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo sin distorsionarse */
+  background-attachment: fixed;
+}
+
+/* Estilo para el video de fondo */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* El video ocupará el 100% del ancho de la pantalla */
+  height: 70%; /* El video solo ocupará el 70% de la altura de la pantalla */
+  object-fit: cover; /* Permite que el video cubra la pantalla */
+  object-position: bottom; /* Se enfoca en la parte inferior del video */
+  z-index: -1; /* Coloca el video detrás del contenido */
+  transition: all 0.3s ease;
+}
+
+/* Contenedor principal (para el texto en movimiento) */
+.content {
+  height: 30%; /* El contenido ocupará el 30% restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  flex-grow: 1; /* Hace que este contenido ocupe el espacio disponible antes del footer */
+}
+
+/* Estilo y animación para el texto que se desplaza */
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  span {
+    display: inline-block;
+    padding-left: 10%;
+    font-size: clamp(3rem, 8vw, 10rem); /* Tamaño del texto responsivo */
+    font-weight: bold;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease-in-out; /* Transición suave de opacidad */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  }
+
+  &.start-animation span {
+    opacity: 1; /* Hace visible el texto cuando se activa */
+    animation: scroll-left 40s linear infinite; /* Animación de desplazamiento */
+  }
+}
+
+/* Keyframes para el movimiento del texto */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%); /* Comienza fuera de la pantalla a la derecha */
+  }
+  to {
+    transform: translateX(-100%); /* Se desplaza hasta fuera de la pantalla a la izquierda */
+  }
+}
+
+/* Estilo para el texto en la parte superior izquierda */
+.textoSupeior {
+  position: absolute;
+  max-width: 750px;
+  top: 5%; /* Ajusta el valor para moverlo más abajo o arriba */
+  left: 5%; /* Ajusta el valor para moverlo más a la derecha o izquierda */
+  color: white;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Texto responsivo */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgb(183, 129, 245), 0 0 20px rgb(148, 86, 218), 0 0 30px rgb(92, 30, 235); /* Efecto neón */
+
+  transition: opacity 0.3s ease-in-out; /* Transición de opacidad */
+}
+
+.textoSupeior span {
+  display: inline-block;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Estilo del footer (Creative Commons) */
+.creativeCommons {
+  padding: 20px 60px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: hsla(0, 0%, 85%, 0.5); /* Ajuste con transparencia */
+  margin-left: 0;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  /* Hacer que el footer siempre quede al fondo */
+  position: relative;
+  min-height: 220px; /* Por defecto, el footer tendrá una altura mínima pequeña */
+  display: flex;
+  align-items: center; /* Centrar el contenido verticalmente */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 767px) {
+  /* Ajustes para el video en pantallas más grandes */
+  .background-video {
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    height: 100%;
+    object-position: bottom; /* Enfoca en la parte inferior */
+  }
+
+  /* Ajuste del tamaño del texto en pantallas más grandes */
+  .scrolling-text span {
+    font-size: clamp(2rem, 6vw, 8rem); /* Texto ajustado para pantallas más grandes */
+  }
+
+  /* Estilo para el footer en pantallas grandes */
+  .creativeCommons {
+    min-height: 30px; /* En pantallas más grandes, el footer tendrá una altura mayor */
+    padding: 5px 5px; /* Mayor padding en pantallas grandes */
+    font-size: 18px; /* Tamaño de fuente ligeramente mayor */
+  }
+}
